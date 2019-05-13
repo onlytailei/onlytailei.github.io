@@ -154,9 +154,22 @@
         </table>
 
         <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-          <tr  bgcolor="#ffffd0">
+          <tr onmouseout="uail_stop()" onmouseover="uail_start()" bgcolor="#ffffd0">
             <td width="25%">
+              <div class="one">
+                <div class="two" id='uail_image'><img src='images/uail_after.gif'></div>
                 <img src='images/uail_before.png'>
+              </div>
+              <script type="text/javascript">
+                function uail_start() {
+                  document.getElementById('uail_image').style.opacity =" 1 ";
+                }
+
+                function uail_stop() {
+                  document.getElementById('uail_image').style.opacity = "0";
+                }
+                uail_stop()
+              </script>
             </td>
             <td valign="middle" width="75%">
               <a href="https://arxiv.org/abs/1903.00821">
@@ -173,10 +186,10 @@
               Haoyang Ye,
               Ming Liu
               <br>
-        			  <a href="https://arxiv.org/abs/1903.00821">arXiv</a> /
-        			  <a href="papers/19030821.bib">bibtex</a> /
-        			  <a href="https://www.youtube.com/watch?v=2iydr7bLIvs">video</a> /
-        			  <a href="https://github.com/onlytailei/carla_cil_pytorch">code</a>
+                  <a href="https://arxiv.org/abs/1903.00821">arXiv</a> /
+                  <a href="papers/19030821.bib">bibtex</a> /
+                  <a href="https://www.youtube.com/watch?v=2iydr7bLIvs">video</a> /
+                  <a href="https://github.com/onlytailei/carla_cil_pytorch">code</a>
               <br>
             </td>
           </tr>
@@ -188,14 +201,14 @@
                 <img src='images/gaze2_before.png'>
               </div>
               <script type="text/javascript">
-                function uail_start() {
+                function gaze2_start() {
                   document.getElementById('gaze2_image').style.opacity =" 1 ";
                 }
 
-                function uail_stop() {
+                function gaze2_stop() {
                   document.getElementById('gaze2_image').style.opacity = "0";
                 }
-                uail_stop()
+                gaze2_stop()
               </script>
             </td>
             <td valign="middle" width="75%">
@@ -212,8 +225,8 @@
               Ming Liu,
               Bertram Shi
               <br>
-        			  <a href="https://arxiv.org/abs/1904.08377">arXiv</a> /
-        			  <a href="papers/190408377.bib">bibtex</a>
+                  <a href="https://arxiv.org/abs/1904.08377">arXiv</a> /
+                  <a href="papers/190408377.bib">bibtex</a>
               <br>
             </td>
           </tr>
@@ -251,9 +264,9 @@
               Ming Liu,
               Bertram Shi
               <br>
-        			  <a href="https://sites.google.com/view/etra19id119/home">page</a> /
-        			  <a href="papers/etra_2019.bib">bibtex</a> /
-        			  <a href="https://youtu.be/6H45P0f6yWE">video</a>
+                  <a href="https://sites.google.com/view/etra19id119/home">page</a> /
+                  <a href="papers/etra_2019.bib">bibtex</a> /
+                  <a href="https://youtu.be/6H45P0f6yWE">video</a>
               <br>
             </td>
           </tr>
@@ -291,10 +304,10 @@
               Chengju Liu,
               Ming Liu
               <br>
-        			  <a href="papers/ral_2019_yun.pdf">pdf</a> /
-        			  <a href="papers/ral_2019_yun.bib">bibtex</a> /
-        			  <a href="https://ram-lab.com/file/pyun/yun19icra">page</a> /
-        			  <a href="https://github.com/pyun-ram/FL3D">code</a>
+                  <a href="papers/ral_2019_yun.pdf">pdf</a> /
+                  <a href="papers/ral_2019_yun.bib">bibtex</a> /
+                  <a href="https://ram-lab.com/file/pyun/yun19icra">page</a> /
+                  <a href="https://github.com/pyun-ram/FL3D">code</a>
               <br>
             </td>
           </tr>
@@ -338,18 +351,31 @@
               <br>
               (*indicates equal contribution)
               <br>
-        			  <a href="papers/ral_2019_tai.pdf">pdf</a> /
-        			  <a href="papers/ral_2019_tai.bib">bibtex</a> /
-        			  <a href="papers/ral_2019_tai_supplement.pdf">supplement</a> /
-        			  <a href="https://ram-lab.com/file/tailei/vr_goggles/index.html">page</a> /
-        			  <a href="https://www.youtube.com/watch?v=AOpiExo-rpw">video</a>
+                  <a href="papers/ral_2019_tai.pdf">pdf</a> /
+                  <a href="papers/ral_2019_tai.bib">bibtex</a> /
+                  <a href="papers/ral_2019_tai_supplement.pdf">supplement</a> /
+                  <a href="https://ram-lab.com/file/tailei/vr_goggles/index.html">page</a> /
+                  <a href="https://www.youtube.com/watch?v=AOpiExo-rpw">video</a>
               <br>
             </td>
           </tr>
 
-          <tr>
+          <tr onmouseout="icraws_stop()" onmouseover="icraws_start()">
             <td width="25%">
-              <img src='images/icraws.png'>
+              <div class="one">
+                <div class="two" id='icraws_image'><img src='images/icraws_after.gif'></div>
+                <img src='images/icraws_before.png'>
+              </div>
+              <script type="text/javascript">
+                function icraws_start() {
+                  document.getElementById('icraws_image').style.opacity =" 1 ";
+                }
+
+                function icraws_stop() {
+                  document.getElementById('icraws_image').style.opacity = "0";
+                }
+                icraws_stop()
+              </script>
             </td>
             <td valign="middle" width="75%">
               <a href="https://arxiv.org/abs/1804.00456">
@@ -365,17 +391,30 @@
               Ming Liu,
               Wolfram Burgard
               <br>
-        			  <a href="papers/icra_2018_ws.pdf">pdf</a> /
-        			  <a href="papers/icra_2018_ws.bib">bibtex</a> /
-                <a href="https://ram-lab.com/file/tailei/18icraws/zheloo18icraws">page</a> /
-                <a href="https://www.youtube.com/watch?v=vnLvSe7n4y4">video</a>
+                  <a href="papers/icra_2018_ws.pdf">pdf</a> /
+                  <a href="papers/icra_2018_ws.bib">bibtex</a> /
+                  <a href="https://ram-lab.com/file/tailei/18icraws/zheloo18icraws">page</a> /
+                  <a href="https://www.youtube.com/watch?v=vnLvSe7n4y4">video</a>
               <br>
             </td>
           </tr>
 
-          <tr  bgcolor="#ffffd0">
+          <tr onmouseout="icra18_stop()" onmouseover="icra18_start()" bgcolor="#ffffd0">
             <td width="25%">
-              <img src='images/icra18.png'>
+              <div class="one">
+                <div class="two" id='icra18_image'><img src='images/icra18_after.gif'></div>
+                <img src='images/icra18_before.png'>
+              </div>
+              <script type="text/javascript">
+                function icra18_start() {
+                  document.getElementById('icra18_image').style.opacity =" 1 ";
+                }
+
+                function icra18_stop() {
+                  document.getElementById('icra18_image').style.opacity = "0";
+                }
+                icra18_stop()
+              </script>
             </td>
             <!-- <td width="25%"><img src="images/B3DO.jpg" alt="b3do" width="160" style="border-style: none"></td> -->
             <td valign="middle" width="75%">
@@ -393,8 +432,8 @@
               Ming Liu,
               Wolfram Burgard
               <br>
-        			  <a href="papers/icra_2018.pdf">pdf</a> /
-        			  <a href="papers/icra_2018.bib">bibtex</a> /
+                <a href="papers/icra_2018.pdf">pdf</a> /
+                <a href="papers/icra_2018.bib">bibtex</a> /
                 <a href="https://drive.google.com/open?id=1H4U9Sl2M1E8Vp3ludJ1oPgu8a77qN3fX">dataset</a> /
                 <a href="https://www.youtube.com/watch?v=0hw0GD3lkA8">video</a>
               <br>
@@ -422,16 +461,29 @@
               Wolfram Burgard,
               Ming Liu
               <br>
-        			  <a href="https://arxiv.org/abs/1706.09520">arXiv</a> /
+                <a href="https://arxiv.org/abs/1706.09520">arXiv</a> /
                 <a href="papers/170609520.bib">bibtex</a> /
                 <a href="https://www.youtube.com/watch?v=gU5xnG9ccBE&t">video</a>
               <br>
             </td>
           </tr>
 
-          <tr  bgcolor="#ffffd0">
+          <tr onmouseout="iros2017_stop()" onmouseover="iros2017_start()" bgcolor="#ffffd0">
             <td width="25%">
-              <img src='images/iros2017.png' width="160">
+              <div class="one">
+                <div class="two" id='iros2017_image'><img src='images/iros2017_after.gif'></div>
+                <img src='images/iros2017_before.png'>
+              </div>
+              <script type="text/javascript">
+                function iros2017_start() {
+                  document.getElementById('iros2017_image').style.opacity =" 1 ";
+                }
+
+                function iros2017_stop() {
+                  document.getElementById('iros2017_image').style.opacity = "0";
+                }
+                iros2017_stop()
+              </script>
             </td>
             <!-- <td width="25%"><img src="images/B3DO.jpg" alt="b3do" width="160" style="border-style: none"></td> -->
             <td valign="middle" width="75%">
