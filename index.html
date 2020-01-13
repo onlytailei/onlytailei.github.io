@@ -150,6 +150,45 @@
         </table>
 
         <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+          <tr onmouseout="drift_stop()" onmouseover="drift_start()">
+            <td width="25%">
+              <div class="one">
+                <div class="two" id='drift_image'><img src='images/drift_after.gif'></div>
+                <img src='images/drift_before.png'>
+              </div>
+              <script type="text/javascript">
+                function drift_start() {
+                  document.getElementById('drift_image').style.opacity =" 1 ";
+                }
+
+                function drift_stop() {
+                  document.getElementById('drift_image').style.opacity = "0";
+                }
+                drift_stop()
+              </script>
+            </td>
+            <td valign="middle" width="75%">
+              <a href="https://arxiv.org/abs/2001.01377">
+                <papertitle>High-speed Autonomous Drifting with Deep Reinforcement Learning.</papertitle>
+              </a>
+              <br>
+              <em>IEEE Robotics and Automation Letters (RA-L), 2020</em>
+              <br>
+              <br>
+              Peide Cai,
+              Xiaodong Mei,
+              <strong>Lei Tai</strong>,
+              Yuiang Sun,
+              Ming Liu
+              <br>
+                  <a href="https://arxiv.org/pdf/2001.01377.pdf">arxiv</a> /
+                  <a href="https://sites.google.com/view/autonomous-drifting-with-drl">page</a> /
+                  <a href="https://youtu.be/ZH-ZbK5dLs0">video</a> /
+                  <a href="https://github.com/flying-cabbage/drift_drl">code</a>
+              <br>
+            </td>
+          </tr>
+
           <tr onmouseout="uail_stop()" onmouseover="uail_start()" bgcolor="#ffffd0">
             <td width="25%">
               <div class="one">
@@ -189,7 +228,6 @@
               <br>
             </td>
           </tr>
-
           <tr onmouseout="gaze2_stop()" onmouseover="gaze2_start()">
             <td width="25%">
               <div class="one">
