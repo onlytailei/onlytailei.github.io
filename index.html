@@ -150,10 +150,23 @@
         </table>
 
         <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
-
-          <tr>
+          
+          <tr onmouseout="mono_stop()" onmouseover="mono_start()">
             <td width="25%">
-              <img src='images/cvpr2020.png' width="160">
+              <div class="one">
+                <div class="two" id='mono_image'><img src='images/cvpr2020.gif'></div>
+                <img src='images/cvpr2020.png'>
+              </div>
+              <script type="text/javascript">
+                function mono_start() {
+                  document.getElementById('mono_image').style.opacity =" 1 ";
+                }
+
+                function mono_stop() {
+                  document.getElementById('mono_image').style.opacity = "0";
+                }
+                mono_stop()
+              </script>
             </td>
             <td valign="middle" width="75%">
               <a href="https://arxiv.org/abs/2003.00504">
