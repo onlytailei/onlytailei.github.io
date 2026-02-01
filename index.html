@@ -1,21 +1,42 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<!doctype html>
 <html>
 
 <head>
   <meta charset="utf-8">
-  <meta name=viewport content="width=900">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="generator" content="HTML Tidy for Linux/x86 (vers 11 February 2007), see www.w3.org">
   <style type="text/css">
-    /* Color scheme stolen from Sergey Karayev */
+    /* Color scheme inspired by Sergey Karayev */
+    :root {
+      --text: #1f2937;
+      --muted: #52606d;
+      --accent: #1772d0;
+      --accent-hover: #f09228;
+      --bg: #f3f6fb;
+      --border: #e8edf5;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.7;
+      -webkit-font-smoothing: antialiased;
+    }
 
     a {
-      color: #1772d0;
+      color: var(--accent);
       text-decoration: none;
+      transition: color .2s ease, background-color .2s ease, box-shadow .2s ease;
     }
 
     a:focus,
     a:hover {
-      color: #f09228;
+      color: var(--accent-hover);
       text-decoration: none;
     }
 
@@ -26,7 +47,11 @@
     p,
     a {
       font-family: 'Lato', Verdana, Helvetica, sans-serif;
-      font-size: 14px
+      font-size: 14px;
+    }
+
+    p {
+      margin: 0 0 12px;
     }
 
     strong {
@@ -35,19 +60,81 @@
     }
 
     heading {
+      display: inline-block;
       font-family: 'Lato', Verdana, Helvetica, sans-serif;
-      font-size: 22px;
+      font-size: 24px;
+      font-weight: 700;
+      color: #0f172a;
+      letter-spacing: 0.2px;
+      padding-bottom: 6px;
+      margin-bottom: 6px;
+      position: relative;
+    }
+
+    heading::after {
+      content: "";
+      display: block;
+      width: 48px;
+      height: 3px;
+      background: var(--accent);
+      border-radius: 999px;
+      margin-top: 6px;
     }
 
     papertitle {
       font-family: 'Lato', Verdana, Helvetica, sans-serif;
-      font-size: 14px;
-      font-weight: 700
+      font-size: 15px;
+      font-weight: 700;
+      color: #0b1220;
+      line-height: 1.4;
     }
 
     mainname {
       font-family: 'Lato', Verdana, Helvetica, sans-serif;
-      font-size: 32px;
+      font-size: 34px;
+      font-weight: 700;
+      letter-spacing: 0.2px;
+    }
+
+    table {
+      border-collapse: separate;
+      border-spacing: 0;
+    }
+
+    .page {
+      max-width: 980px;
+      margin: 32px auto 48px;
+      padding: 8px 0;
+      background: #fff;
+      border-radius: 18px;
+      box-shadow: 0 18px 40px rgba(15, 23, 42, 0.12);
+    }
+
+    table.layout {
+      width: 100%;
+    }
+
+    @media (max-width: 980px) {
+      .page {
+        margin: 16px;
+      }
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      border-radius: 12px;
+      box-shadow: 0 8px 20px rgba(15, 23, 42, 0.12);
+    }
+
+    .avatar {
+      width: 220px;
+      max-width: 220px;
+      border-radius: 50%;
+      border: 4px solid #fff;
+      box-shadow: 0 12px 26px rgba(15, 23, 42, 0.18);
+      margin: 0 auto;
     }
 
     .one {
@@ -65,6 +152,10 @@
       -webkit-transition: opacity .2s ease-in-out;
     }
 
+    .two img {
+      box-shadow: none;
+    }
+
     .fade {
       transition: opacity .2s ease-in-out;
       -moz-transition: opacity .2s ease-in-out;
@@ -72,7 +163,40 @@
     }
 
     span.highlight {
-      background-color: #ffffd0;
+      background-color: #fff3c4;
+      padding: 2px 6px;
+      border-radius: 4px;
+    }
+
+    .publication-list tr + tr td {
+      border-top: 1px solid var(--border);
+      padding-top: 24px;
+    }
+
+    .social-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      justify-content: center;
+      margin-top: 8px;
+    }
+
+    .social-links a {
+      display: inline-block;
+      padding: 6px 12px;
+      border: 1px solid var(--border);
+      border-radius: 999px;
+      background: #f8fafc;
+    }
+
+    .social-links a:hover,
+    .social-links a:focus {
+      background: #fff;
+      box-shadow: 0 6px 16px rgba(15, 23, 42, 0.08);
+    }
+
+    tr[bgcolor] {
+      background-color: #fff8e1;
     }
   </style>
   <link rel="icon" type="image/jpg" href="images/hkust.jpg">
@@ -83,13 +207,14 @@
 
 <body>
 
-  <table width="900" border="0" align="center" cellspacing="0" cellpadding="0">
-    <tr>
-      <td>
-        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+  <div class="page">
+    <table class="layout" width="100%" border="0" align="center" cellspacing="0" cellpadding="0">
+      <tr>
+        <td>
+        <table class="publication-list" width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
           <tr>
             <td width="33%" style="height:300px">
-              <img src="images/me_circle.png">
+              <img src="images/me_circle.png" class="avatar" alt="Lei Tai">
             </td>
             <td width="67%" valign="middle" style="height:300px">
               <p>
@@ -124,17 +249,17 @@
               <a href="http://www.joschka-boedecker.de/">Joschka Boedecker</a>.
               I was also with <a href="https://www.cityu.edu.hk/">City University of Hong Kong</a> from Sep 2015 to Aug 2017 which is another long story...
               </p>
-              <p align=center>
-                <a href="https://scholar.google.com.hk/citations?user=RjOPTHIAAAAJ&hl=en">Google Scholar</a> &nbsp/&nbsp
-                <a href="https://github.com/onlytailei">Github</a> &nbsp/&nbsp
-                <a href="cv/taileicv.pdf">CV</a> &nbsp/&nbsp
+              <p align="center" class="social-links">
+                <a href="https://scholar.google.com.hk/citations?user=RjOPTHIAAAAJ&hl=en">Google Scholar</a>
+                <a href="https://github.com/onlytailei">Github</a>
+                <a href="cv/taileicv.pdf">CV</a>
                 <a href="https://www.linkedin.com/in/leitai">LinkedIn</a>
               </p>
             </td>
           </tr>
         </table>
 
-        <table width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
+        <table class="publication-list" width="100%" align="center" border="0" cellspacing="0" cellpadding="20">
           <tr>
             <td width="100%" valign="middle">
               <heading>Research</heading>
@@ -277,7 +402,6 @@
           <tr>
             <td width="25%">
                 <img src='images/gaze2_before.png'>
-              </div>
             </td>
             <td valign="middle" width="75%">
               <a href="https://ieeexplore.ieee.org/document/8967843">
@@ -784,8 +908,9 @@
           </tr>
         </table>
         </td>
-    </tr>
-  </table>
+      </tr>
+    </table>
+  </div>
 </body>
 
 </html>
